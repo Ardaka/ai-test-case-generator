@@ -1,0 +1,29 @@
+{
+  "name": "ai-test-case-generator",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Generate review-ready test cases from user stories with GitHub Models.",
+  "bin": {
+    "test-case-generator": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "generate:demo": "tsx src/cli.ts --input examples/checkout-story.md --output examples/generated-test-plan.md --demo"
+  },
+  "dependencies": {
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "26.2.0",
+    "tsx": "4.23.12",
+    "typescript": "7.0.2",
+    "vitest": "4.1.10"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
+
